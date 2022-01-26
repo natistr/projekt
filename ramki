@@ -1,0 +1,62 @@
+#include <iostream>
+#include <fstream>
+#include <string>
+#include <iomanip>
+using namespace std;
+
+
+int main() {
+
+
+    char frame1[] = "|";
+    
+    string MenuDaniaGlowne;
+    ifstream Glowne("C:\\Users\\natam\\Desktop\\projekt kafe\\Danie Glowne.txt");
+    cout << "----------------------MENU---------------------" << endl;
+    while (getline(Glowne, MenuDaniaGlowne)) {
+        cout << frame1 << MenuDaniaGlowne << frame1 << endl;
+    }
+    Glowne.close();
+
+
+
+    string MenuPrzystawki;
+    ifstream Przystawki("C:\\Users\\natam\\Desktop\\projekt kafe\\Przystawki.txt");
+    while (getline(Przystawki, MenuPrzystawki)) {
+        cout << frame1<< MenuPrzystawki << frame1 << endl;
+    }
+    Przystawki.close();
+
+
+
+    string MenuDesery;
+    ifstream Desery("C:\\Users\\natam\\Desktop\\projekt kafe\\Desery.txt");
+    while (getline(Desery, MenuDesery)) {
+        cout << frame1 << MenuDesery << frame1 << endl;
+    }
+
+    Desery.close();
+
+
+
+    string NapojeZimne;
+    ifstream Zimne("C:\\Users\\natam\\Desktop\\projekt kafe\\Napoje zimne.txt");
+    while (getline(Zimne, NapojeZimne)) {
+        cout <<frame1 << NapojeZimne << frame1 << endl;
+    }
+
+    Zimne.close();
+
+
+
+    string NapojeGorace;
+    ifstream Gorace("C:\\Users\\natam\\Desktop\\projekt kafe\\Napoje gor.txt");
+    while (getline(Gorace, NapojeGorace)) {
+        cout << frame1 << NapojeGorace << frame1 <<endl;
+    }
+
+    Gorace.close();
+    cout << "-----------------------------------------------" << endl;
+
+    return 0;
+}
